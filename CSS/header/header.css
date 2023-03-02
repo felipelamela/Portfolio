@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem;
+  padding: 2rem;
+}
+.header__titulo {
+  font-size: 1.5rem;
+}
+.header__lista {
+  display: flex;
+}
+.icon {
+  width: 30px;
+  padding: 0 0.5rem;
+  margin: 0 1rem;
+}
+@media (max-width: 550px) {
+  .header {
+    margin: 1rem;
+    padding: 0;
+  }
+}

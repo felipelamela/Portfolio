@@ -1,0 +1,54 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  
+}
+.form__padrao {
+  font-size: 1.5rem;
+  background: rgb(26, 26, 34);
+  border: none;
+  border-bottom: 1px solid;
+  padding: 1rem;
+  margin: 0.6rem 0;
+  color: rgb(225, 241, 255);
+  position: relative;
+  resize: none;
+}
+
+.form__padrao::placeholder {
+  color: rgb(225, 241, 255);
+}
+
+.form__padrao:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.form__label {
+  font-size: 1.5rem;
+  position: absolute;
+  z-index: 1;
+  top: 35px;
+  left: 15px;
+  transition: all 0.1s;
+
+
+}
+
+.form__label--focado {
+  font-size: 1rem;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 5px;
+  transition: all 0.3s;
+}
+
+
+@media(max-width:550px){
+  .form{
+    margin: 0;
+  }
+}
