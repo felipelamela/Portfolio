@@ -1,15 +1,15 @@
 let itemFocado = document.querySelectorAll(".input");
 const labelFocada = document.querySelectorAll(".focada");
 
-for (let i in itemFocado) {
-  itemFocado[i].addEventListener("focus", () => {
-    labelFocada[i].classList.remove("form__label");
-    labelFocada[i].classList.add("form__label--focado");
+itemFocado.forEach(function (valor, chave) {
+  valor.addEventListener("focus", () => {
+    labelFocada[chave].classList.remove("form__label");
+    labelFocada[chave].classList.add("form__label--focado");
   });
-  itemFocado[i].addEventListener("blur", () => {
-    if (itemFocado[i].value.length == 0) {
-      labelFocada[i].classList.add("form__label");
-      labelFocada[i].classList.remove("form__label--focado");
+  valor.addEventListener("blur", () => {
+    if (valor.value.length === 0) {
+      labelFocada[chave].classList.add("form__label");
+      labelFocada[chave].classList.remove("form__label--focado");
     }
   });
-}
+});

@@ -45,6 +45,31 @@
   left: 5px;
   transition: all 0.3s;
 }
+.botao__submit{
+  max-width: 100px;
+  background-color: rgb(26, 26, 34);
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1.5rem;
+  color: rgb(225, 241, 255);
+  cursor: pointer;
+  position: relative;
+}
+.botao__submit::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-radius: 3px;
+  height: 2px;
+  background: rgb(225, 241, 255);
+  top:40px;
+  left: 10px;
+}
+.botao__submit:hover::before {
+  display: inline;
+  width: 80px;
+  transition: all 0.3s;
+}
 
 
 @media(max-width:550px){
