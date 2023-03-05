@@ -6,16 +6,22 @@ body {
   margin: 0 auto;
 }
 
+.titulo__geral{
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 2rem 1rem;
+}
+
 .botao__contato {
   font-size: 1.1rem;
   text-decoration: none;
-
   display: inline-block;
   padding: 2rem 0;
   grid-column: 1;
   text-transform: uppercase;
   position: relative;
   letter-spacing: 1.6px;
+
 }
 .botao__contato:hover {
   cursor: pointer;
@@ -27,15 +33,16 @@ body {
 .botao__contato::before {
   content: "";
   position: absolute;
-  width: 0;
-  border-radius: 3px;
+  width: 15px;
+  left: -5px;
   height: 2px;
   background: rgb(103, 88, 184);
   bottom: 25px;
+  transition: all 0.3s;
 }
 
 .botao__contato:hover::before {
-  width: 100%;
+  width: 110%;
   transition: all 0.3s;
 }
 
@@ -50,15 +57,25 @@ body {
 .botao_projetos::before {
   content: "";
   position: absolute;
-  width: 0;
-  border-radius: 3px;
+  width: 10px;
   height: 2px;
-  background: rgb(103, 88, 184);
+  background: rgb(225, 241, 255);
   top: 25px;
+  left: -2px;
+  transition: all 0.3s;
 }
 
 .botao_projetos:hover::before {
   display: inline;
-  width: 100%;
+  width: 110%;
   transition: all 0.3s;
+}
+@media(max-width: 500px){
+  body{
+    max-width: 100vw;
+    margin: 0;
+  }
+  .titulo__geral{
+    padding: 1rem;
+  }
 }

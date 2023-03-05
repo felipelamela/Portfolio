@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-
-  
 }
 .form__padrao {
   font-size: 1.5rem;
@@ -33,8 +31,6 @@
   top: 35px;
   left: 15px;
   transition: all 0.1s;
-
-
 }
 
 .form__label--focado {
@@ -58,22 +54,23 @@
 .botao__submit::before {
   content: "";
   position: absolute;
-  width: 0;
+  width: 15px;
   border-radius: 3px;
   height: 2px;
   background: rgb(225, 241, 255);
   top:40px;
-  left: 10px;
+  left: 5px;
+  transition: all 0.3s;
 }
 .botao__submit:hover::before {
   display: inline;
-  width: 80px;
+  width: 90px;
   transition: all 0.3s;
 }
 
 
 @media(max-width:550px){
   .form{
-    margin: 0;
+    margin: 0 0 3rem 0;
   }
 }

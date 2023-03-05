@@ -1,5 +1,5 @@
 .apresentacao {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem 6rem;
   margin: 0 5rem;
   border-bottom: 1px solid rgb(225, 241, 255);
 }
@@ -11,7 +11,7 @@
 }
 
 .apresentacao__paragrafo {
-  padding: 2.5rem 0;
+  padding: 3rem 0;
   font-size: 1.5rem;
   grid-column: 1;
   max-width: 40ch;
@@ -21,7 +21,6 @@
   content: "";
   position: absolute;
   width: 610px;
-  border-radius: 3px;
   height: 4px;
   background: rgb(103, 88, 184);
   bottom: -8px;
@@ -42,6 +41,10 @@
     left: 1px;
   }
 }
+@media (max-width: 700px) {
+  .apresentacao__detalhe::before {
+    display: none;
+  }
 
 @media (max-width: 550px) {
   .apresentacao {
@@ -49,6 +52,7 @@
     grid-template-columns: 1fr;
     margin: 0 auto;
     padding: 3rem 1.4rem;
+    box-sizing: border-box;
   }
   .apresentacao__titulo {
     font-size: 4rem;
@@ -64,8 +68,5 @@
     display: none;
   }
 }
-@media (max-width: 700px) {
-  .apresentacao__detalhe::before {
-    display: none;
-  }
+
 }

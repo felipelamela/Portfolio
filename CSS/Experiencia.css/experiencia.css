@@ -1,12 +1,19 @@
-.experiencia {
+.experiencia{
   display: flex;
-  flex-wrap: wrap;
-  margin: 3rem 5rem;
+  flex-direction: column;
+  padding: 4rem 0.2rem;
+  margin: 0 5rem;
+}
+
+
+.experiencia--container {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   padding: 0 0 2rem 0;
   border-bottom: 1px solid rgb(225, 241, 255);
 }
-.experiencia__container {
+.experiencia__container--info {
   padding: 1rem 3rem;
   margin: 2rem 0;
   text-align: center;
@@ -24,13 +31,11 @@
   font-size: 1.3rem;
 }
 @media (max-width:950px){
-  .experiencia{
+  .experiencia--container{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .experiencia__img{
-    max-width: 40px;
-  }
+ 
   .experiencia__titulo{
     font-size: 1.5rem;
   }
@@ -42,6 +47,7 @@
 @media(max-width:550px){
   .experiencia{
     margin: 0;
+    padding: 0;
     
   }
 }

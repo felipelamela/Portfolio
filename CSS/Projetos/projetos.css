@@ -1,5 +1,6 @@
 .projetos {
-  margin: 3rem 5rem;
+  padding:  0.2rem;
+  margin: 0 5rem;
   border-bottom: 1px solid rgb(225, 241, 255);
 }
 
@@ -7,7 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 0;
+  box-sizing: border-box;
+
 }
 .projetos__titulo {
   font-size: 3.5rem;
@@ -24,12 +26,16 @@
   text-align: center;
 }
 
+
+
 .projeto__img {
-  width: 400px;
+  max-width: 400px;
   margin: 0.5rem;
 }
 .projeto__link {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 .projeto__link:visited {
   color: rgb(225, 241, 255);
@@ -48,9 +54,16 @@
 @media(max-width:550px){
   .projetos {
     margin: 0;
-    padding: 0 1rem;
+    padding: 0 ;
+    box-sizing: border-box;
   }
   .projetos__titulo{
     padding: 0;
   }
+  .projeto__img {
+    max-width: 350px;
+    margin: 0.5rem;
+    object-fit:scale-down;
+  }
+
 }
